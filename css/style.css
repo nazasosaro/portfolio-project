@@ -11,14 +11,6 @@ body {
   font-family: var(--default-font-family);
 }
 
-.hero h1,
-.hero h2,
-.hero p {
-  color: var(--primary-color);
-  font-family: var(--heading-font-family);
-  font-weight: bold;
-}
-
 h1 {
   font-size: 96px;
 }
@@ -33,7 +25,16 @@ p {
   font-weight: normal;
 }
 
-.hero {
+h1,
+.hero h2,
+.hero p {
+  color: var(--primary-color);
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+}
+
+.hero,
+.about-section {
   background: var(--secondary-color);
   text-align: center;
   padding: 160px 20px;
@@ -59,11 +60,7 @@ p {
   margin-right: 50px;
 }
 
-.project-description {
-  padding: 140px 70px 140px 0;
-}
-
-.container h2 {
+.project-title h2 {
   border-bottom: 1px dashed black;
   font-family: var(--heading-font-family);
   font-size: 45px;
@@ -72,9 +69,30 @@ p {
   margin-right: 935px;
 }
 
-.btn:hover {
-  background-color: var(--secondary-color);
+.project-description {
+  padding: 140px 70px 140px 0;
+}
+
+.about-section h1 {
+  font-family: var(--heading-font-family);
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.about-section h2,
+.about-section p {
   color: var(--primary-color);
+}
+
+.about-section h2 {
+  font-size: 30px;
+}
+
+.about-section p {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 170px;
+  margin-right: 170px;
 }
 
 .btn-branding-outline {
@@ -87,10 +105,30 @@ p {
   padding: 15px 30px;
 }
 
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-branding {
+  background: var(--primary-color);
+  border-radius: 4px;
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+  padding: 15px 30px;
+}
+
+.btn-branding:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+}
+
 @media (max-width: 900px) {
   h1 {
     font-size: 44px;
-    line-height: 2;
+    line-height: 56px;
   }
 
   h2 {
