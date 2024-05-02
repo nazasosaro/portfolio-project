@@ -218,16 +218,18 @@ footer .social-links a {
 
 @media (max-width: 900px) {
   h1 {
-    font-size: 44px;
     line-height: 56px;
   }
 
-  h2 {
-    font-size: 40px;
+  .project-title {
+    font-size: 44px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
   }
 
   h3 {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .hero {
