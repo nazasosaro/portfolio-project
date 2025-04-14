@@ -21,26 +21,36 @@
 
 <body data-bs-spy="scroll" data-bs-target="#goTop">
   <div id="topbar" class="topbar"></div>
-  <header class="container">
-    <nav class="nav-bar">
-      <h4>
-        <a href="/"> Naza Sosa </a>
-      </h4>
-      <ul>
-        <li>
-          <a href="#about">About me</a>
-        </li>
-        <li>
-          <a href="#work">Work</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+  <header>
+    <div class="container">
+      <nav class="nav-bar">
+        <h4>
+          <a href="/"> Naza Sosa </a>
+        </h4>
+        <button class="btn-menu" id="openMenu">
+          <img src="assets_front/images/menu.svg" alt="open menu" loading="lazy" decoding="async">
+        </button>
+        <div class="menu-toggle" id="menuToggle">
+          <button class="btn-menu" id="closeMenu">
+            <img src="assets_front/images/close.svg" alt="close menu" loading="lazy" decoding="async">
+          </button>
+          <ul class="menu-list">
+            <li>
+              <a href="#about">About me</a>
+            </li>
+            <li>
+              <a href="#work">Work</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <section class="about-section" id="about">

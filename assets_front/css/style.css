@@ -21,7 +21,7 @@
   --black: #333;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
-  --border-radius: .5rem;
+  --border-radius: 0.5rem;
 }
 
 * {
@@ -146,6 +146,25 @@ p {
   padding-bottom: 0.125rem;
   font-weight: 700;
 }
+.btn-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  padding: 0.2rem;
+  transition: all 100ms;
+}
+.btn-menu img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+.btn-menu:hover {
+  background-color: var(--terciary-color);
+}
 
 /*** end header ***/
 
@@ -190,7 +209,7 @@ p {
 }
 .about-section-content {
   border: 4px solid var(--primary-color);
-  border-radius: .7rem;
+  border-radius: 0.7rem;
 }
 
 /*** end about section ***/
@@ -224,7 +243,7 @@ p {
 }
 .card-work {
   display: grid;
-  grid-template-columns: .5fr 1fr auto;
+  grid-template-columns: 0.5fr 1fr auto;
   gap: 3rem;
   background-color: var(--terciary-color);
   border-radius: var(--border-radius);
@@ -366,9 +385,15 @@ footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 100ms;
+}
+footer .social-links a:hover img {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(3%) saturate(1055%)
+    hue-rotate(314deg) brightness(81%) contrast(83%);
 }
 footer .social-links img {
-  filter: brightness(0) saturate(100%) invert(37%) sepia(7%) saturate(612%) hue-rotate(287deg) brightness(95%) contrast(93%);
+  filter: brightness(0) saturate(100%) invert(37%) sepia(7%) saturate(612%)
+    hue-rotate(287deg) brightness(95%) contrast(93%);
   width: 2rem;
   height: 2rem;
 }
@@ -490,6 +515,7 @@ footer .social-links img {
     border-radius: 0 0 var(--border-radius) var(--border-radius);
   }
   .about-section .row .col-lg-6:last-child {
+    position: inherit;
     top: 0;
     margin-left: 0;
   }
@@ -520,5 +546,34 @@ footer .social-links img {
   }
 }
 @media (max-width: 768px) {
-  
+  /* header */
+  .btn-menu {
+    display: flex;
+  }
+  .menu-toggle {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    width: 190px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  .menu-toggle.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 1.125rem;
+  }
 }
